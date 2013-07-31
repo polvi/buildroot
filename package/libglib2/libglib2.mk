@@ -69,7 +69,8 @@ HOST_LIBGLIB2_CONF_OPT = \
 		--disable-dtrace \
 		--disable-systemtap \
 		--disable-gcov \
-		--disable-modular-tests
+		--disable-modular-tests \
+		--without-python
 
 LIBGLIB2_CONF_OPT += --disable-modular-tests
 ifeq ($(BR2_TOOLCHAIN_HAS_THREADS),)

@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-SYSTEMD_VERSION = 44
+SYSTEMD_VERSION = 204
 SYSTEMD_SITE = http://www.freedesktop.org/software/systemd/
 SYSTEMD_SOURCE = systemd-$(SYSTEMD_VERSION).tar.xz
 SYSTEMD_INSTALL_STAGING = YES
@@ -35,6 +35,9 @@ SYSTEMD_CONF_OPT += \
 	--with-udevrulesdir=/etc/udev/rules.d \
 	--with-sysvinit-path=/etc/init.d/ \
 	--without-sysvrcd-path \
+        --disable-manpages \
+        --without-python \
+	--disable-localed \
 	--enable-split-usr
 
 ifeq ($(BR2_PACKAGE_ACL),y)
